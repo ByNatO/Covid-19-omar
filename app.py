@@ -282,7 +282,11 @@ eu = ['Albania', 'Andorra', 'Austria', 'Belarus', 'Belgium', 'Bosnia and Herzego
     
 africa = ['Senegal', 'Egypt', 'South Africa', 'Nigeria', 'Mali', 'Kenya',
        'Guinea-Bissau', 'Gambia', "Cote d'Ivoire", 'Cabo Verde', 'Burkina Faso',
-       'Mauritania', 'Morocco']
+       'Mauritania', 'Morocco', 'Zimbabwe', 'Zambia', 'Tunisia', 'Togo',
+        'Somalia', 'Niger', 'Madagascar', 'Libya', 'Guinea', 'Ghana', 'Gabon',
+         'Ethiopia', 'Eswatini', 'Eritrea', 'Equatorial Guinea', 'Djibouti', 
+         'Congo', 'Congo', 'Chad', 'Central African Republic', 'Cameroon',
+         'Benin']
 
 region_options = {'Worldwide': available_countries, 'United States': states, 'Europe': eu, 'Africa': africa}
 
@@ -634,7 +638,7 @@ def world_map_active(view, date_index):
         projection_type='natural earth'
     elif view == 'Africa':
         df = df_af
-        scope='africa'
+        scope='world'
         projection_type='natural earth'
     else:
         df = data
@@ -868,7 +872,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
     html.Div(
         dcc.Markdown('''
             Built by [Greg Rafferty](https://www.linkedin.com/in/gregrafferty/)
-            Customize for Africa By [Omar Badiane] (https://www.linkedin.com/in/omar-badiane-b026b7168/)
+            Customized for Africa By [Omar Badiane] (https://www.linkedin.com/in/omar-badiane-b026b7168/)
             Source data: [Johns Hopkins CSSE](https://github.com/CSSEGISandData/COVID-19)
             '''),
             style={
